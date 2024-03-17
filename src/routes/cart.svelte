@@ -1,5 +1,5 @@
 <script>
-  import Card from "$lib/card.svelte";
+  import Card from "./card.svelte";
   import { cart } from "$lib/store.js";
 </script>
 

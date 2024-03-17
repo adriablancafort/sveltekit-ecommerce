@@ -1,6 +1,6 @@
 <script>
   import "../app.css";
-  import Cart from "$lib/cart.svelte";
+  import Cart from "./cart.svelte";
 </script>
 
 <div class="flex">

@@ -10,7 +10,9 @@
 </script>
 
 <div>
-  <img src={product.image} alt={product.title} />
+  <a href="/{product.id}">
+    <img src={product.image} alt={product.title} />
+  </a>
   <a href="/{product.id}">
     <h3>{product.title}</h3>
   </a>
