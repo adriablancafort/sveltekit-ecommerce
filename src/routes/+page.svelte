@@ -15,7 +15,7 @@
 
 <h1>Home</h1>
 
-<div class="grid grid-cols-5 gap-8">
+<div class="grid grid-cols-4 gap-8">
   {#each products as product (product.id)}
     <Card {product} />
   {/each}
