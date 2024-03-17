@@ -1,5 +1,5 @@
 <script>
-  import Card from "$lib/Card.svelte";
+  import Card from "$lib/card.svelte";
   let products = [];
 
   async function getProducts() {
@@ -13,7 +13,7 @@
   <title>Brickoram</title>
 </svelte:head>
 
-<h1>Brickoram</h1>
+<h1>Home</h1>
 
 <div class="grid grid-cols-5 gap-8">
   {#each products as product (product.id)}
