@@ -9,7 +9,3 @@
     <Item {product} />
   {/each}
 </div>
-
-<style>
-
-</style>
