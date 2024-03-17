@@ -11,10 +11,10 @@
 
 <div>
   <a href="/{product.id}">
-    <img src={product.image} alt={product.title} />
+    <img src={product.image} alt={product.title} style:--image="image-{product.id}" />
   </a>
   <a href="/{product.id}">
-    <h3>{product.title}</h3>
+    <h3 style:--title="title-{product.id}">{product.title}</h3>
   </a>
   <p>{product.description}</p>
   <p>Price: {product.price}</p>
@@ -22,3 +22,13 @@
   <p>Rating: {product.rating.rate} ({product.rating.count} reviews)</p>
   <button on:click={addToCart}>Add to cart</button>
 </div>
+
+<style>
+img {
+    view-transition-name: var(--image);
+}
+
+h3 {
+    view-transition-name: var(--title);
+}
+</style>

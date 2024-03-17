@@ -4,6 +4,7 @@ export async function load({ params }) {
   );
   const product = await res.json();
   return {
+    id: product.id,
     title: product.title,
     image: product.image,
     price: product.price,

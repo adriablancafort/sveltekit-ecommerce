@@ -1,11 +1,15 @@
 <script>
-  import Card from "./card.svelte";
+  import Item from "./item.svelte";
   import { cart } from "$lib/store.js";
 </script>
 
-<div>
+<div class="w-40">
   <h1>Cart</h1>
   {#each $cart as product (product.id)}
-    <Card {product} />
+    <Item {product} />
   {/each}
 </div>
+
+<style>
+
+</style>
