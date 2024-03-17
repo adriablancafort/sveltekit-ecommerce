@@ -1,15 +1,19 @@
 <script>
-  import { cart } from '$lib/store.js';
+  import { cart } from "$lib/store.js";
   export let product;
 
   function addToCart() {
-    cart.update(items => [...items, product]);
+    cart.update((items) => {
+      return [...items, product];
+    });
   }
 </script>
 
 <div>
   <img src={product.image} alt={product.title} />
-  <h3>{product.title}</h3>
+  <a href="/{product.id}">
+    <h3>{product.title}</h3>
+  </a>
   <p>{product.description}</p>
   <p>Price: {product.price}</p>
   <p>Category: {product.category}</p>
