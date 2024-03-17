@@ -10,7 +10,7 @@
 </script>
 
 <svelte:head>
-  <title>Brickoram</title>
+  <title>SvelteKit Ecommerce</title>
 </svelte:head>
 
 <h1>Home</h1>
