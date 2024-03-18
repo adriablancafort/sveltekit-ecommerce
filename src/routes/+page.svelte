@@ -32,9 +32,9 @@
   <title>SvelteKit Ecommerce</title>
 </svelte:head>
 
-<h1>Home</h1>
-
-<div class="grid grid-cols-4 gap-8">
+<div
+  class="grid grid-cols-5 gap-5 p-5 mx-auto max-w-[1500px] pr-60"
+>
   {#each products as product, index (index)}
     <Card {product} />
   {/each}

@@ -9,9 +9,13 @@
   }
 </script>
 
-<div>
+<div class="border border-gray-300 rounded p-5">
   <a href="/product/{product.id}">
-    <img src={product.image} alt={product.title} style:--image="image-{product.id}" />
+    <img
+      src={product.image}
+      alt={product.title}
+      style:--image="image-{product.id}"
+    />
   </a>
   <h3 style:--title="title-{product.id}" class="text-2xl">{product.title}</h3>
   <p>{product.description}</p>
@@ -22,11 +26,11 @@
 </div>
 
 <style>
-img {
+  img {
     view-transition-name: var(--image);
-}
+  }
 
-h3 {
+  h3 {
     view-transition-name: var(--title);
-}
+  }
 </style>

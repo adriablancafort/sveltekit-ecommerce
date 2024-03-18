@@ -12,7 +12,7 @@
 </script>
 
 <div>
-  <img class="w-96" src={image} alt={title} style:--image="image-{id}" />
+  <img class="w-80" src={image} alt={title} style:--image="image-{id}" />
   <h3 style:--title="title-{id}" class="text-2xl">{title}</h3>
   <p>{description}</p>
   <p>Price: {price}</p>
