@@ -10,12 +10,10 @@
 </script>
 
 <div>
-  <a href="/{product.id}">
+  <a href="/product/{product.id}">
     <img src={product.image} alt={product.title} style:--image="image-{product.id}" />
   </a>
-  <a href="/{product.id}">
-    <h3 style:--title="title-{product.id}" class="text-2xl">{product.title}</h3>
-  </a>
+  <h3 style:--title="title-{product.id}" class="text-2xl">{product.title}</h3>
   <p>{product.description}</p>
   <p>Price: {product.price}</p>
   <p>Category: {product.category}</p>
