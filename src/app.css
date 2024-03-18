@@ -1,5 +1,17 @@
 @import "tailwindcss";
 
+button,
+a {
+  -webkit-tap-highlight-color: transparent;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+img {
+  -webkit-user-drag: none;
+}
+
 button {
-  @apply bg-blue-500 text-white font-bold py-2 px-4 rounded;
+  color: white;
+  background-color: blue;
+  padding: 10px 20px;
 }
