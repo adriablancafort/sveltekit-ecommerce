@@ -15,9 +15,9 @@
   });
 </script>
 
-<main class="overflow-hidden group cart-opened">
+<main class="overflow-hidden group" data-state="open">
   <Cart />
-  <div class="mx-auto max-w-[1400px] group-[.cart-opened]:pr-52">
+  <div class="mx-auto max-w-[1400px] group-data-[state=open]:pr-52">
     <slot />
   </div>
 </main>
