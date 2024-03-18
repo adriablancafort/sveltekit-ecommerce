@@ -9,7 +9,7 @@
   }
 </script>
 
-<div class="border border-gray-300 rounded p-5">
+<div class="border border-gray-300 rounded p-5 hover:scale-105 hover:shadow-xl">
   <a href="/product/{product.id}">
     <img
       src={product.image}
