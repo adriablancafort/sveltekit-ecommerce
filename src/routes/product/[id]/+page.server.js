@@ -11,5 +11,5 @@ export async function load({ fetch, params }) {
   };
 }
 
-export const prerender = true;
+// export const prerender = true;
 // export const prerender = 'auto';
