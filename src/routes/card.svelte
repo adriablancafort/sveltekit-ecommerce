@@ -14,7 +14,7 @@
     <img src={product.image} alt={product.title} style:--image="image-{product.id}" />
   </a>
   <a href="/{product.id}">
-    <h3 style:--title="title-{product.id}">{product.title}</h3>
+    <h3 style:--title="title-{product.id}" class="text-2xl">{product.title}</h3>
   </a>
   <p>{product.description}</p>
   <p>Price: {product.price}</p>
