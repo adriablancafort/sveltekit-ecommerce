@@ -1,22 +1,30 @@
 <script>
-    export let data;
-    const { product } = data;
+  import { onMount } from "svelte";
+  export let data;
+  const { image, title, description, category, id } = data;
+  let price = "Loading";
+
+  onMount(async () => {
+    const response = await fetch(`https://dummyjson.com/products/${id}`);
+    const product = await response.json();
+    price = product.price;
+  });
 </script>
 
 <div>
-  <img class="w-96" src={product.image} alt={product.title} style:--image="image-{product.id}" />
-  <h3 style:--title="title-{product.id}" class="text-2xl" >{product.title}</h3>
-  <p>{product.description}</p>
-  <p>Price: {product.price}</p>
-  <p>Category: {product.category}</p>
+  <img class="w-96" src={image} alt={title} style:--image="image-{id}" />
+  <h3 style:--title="title-{id}" class="text-2xl">{title}</h3>
+  <p>{description}</p>
+  <p>Price: {price}</p>
+  <p>Category: {category}</p>
 </div>
 
 <style>
-img {
+  img {
     view-transition-name: var(--image);
-}
+  }
 
-h3 {
+  h3 {
     view-transition-name: var(--title);
-}
+  }
 </style>
