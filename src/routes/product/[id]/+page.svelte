@@ -11,6 +11,10 @@
   });
 </script>
 
+<svelte:head>
+  <title>{title}</title>
+</svelte:head>
+
 <div>
   <img class="w-80" src={image} alt={title} style:--image="image-{id}" />
   <h3 style:--title="title-{id}" class="text-2xl">{title}</h3>

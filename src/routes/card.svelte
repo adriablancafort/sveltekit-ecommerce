@@ -18,7 +18,6 @@
     />
   </a>
   <h3 style:--title="title-{product.id}" class="text-2xl">{product.title}</h3>
-  <p>{product.description}</p>
   <p>Price: {product.price}</p>
   <p>Category: {product.category}</p>
   <p>Rating: {product.rating.rate} ({product.rating.count} reviews)</p>
