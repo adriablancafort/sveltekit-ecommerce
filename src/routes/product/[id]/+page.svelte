@@ -1,14 +1,6 @@
 <script>
-  import { onMount } from "svelte";
   export let data;
-  const { image, title, description, category, id } = data;
-  let price = "Loading";
-
-  onMount(async () => {
-    const response = await fetch(`https://dummyjson.com/products/${id}`);
-    const product = await response.json();
-    price = product.price;
-  });
+  const { image, title, description, category, id, price } = data;
 </script>
 
 <svelte:head>

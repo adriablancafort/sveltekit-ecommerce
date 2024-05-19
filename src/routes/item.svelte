@@ -1,5 +1,4 @@
 <script>
-  import { cart } from "$lib/store.js";
   export let product;
 </script>
 
