@@ -1,18 +1,18 @@
 <script>
   export let data;
-  const { image, title, description, category, id, price } = data;
+  const { product } = data;
 </script>
 
 <svelte:head>
-  <title>{title}</title>
+  <title>{product.title}</title>
 </svelte:head>
 
 <div>
-  <img class="w-80" src={image} alt={title} style:--image="image-{id}" />
-  <h3 style:--title="title-{id}" class="text-2xl">{title}</h3>
-  <p>{description}</p>
-  <p>Price: {price}</p>
-  <p>Category: {category}</p>
+  <img class="w-80" src={product.image} alt={product.title} style:--image="image-{product.id}" />
+  <h3 style:--title="title-{product.id}" class="text-2xl">{product.title}</h3>
+  <p>{product.description}</p>
+  <p>Price: {product.price}</p>
+  <p>Category: {product.category}</p>
 </div>
 
 <style>
