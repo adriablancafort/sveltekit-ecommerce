@@ -23,3 +23,9 @@
         <img src="/asilor-logo-light.svg" alt="Asilor Logo" width="129" height="33">
     </a>
 </header>
+
+<style>
+  header {
+    view-transition-name: main-header;
+  }
+</style>
