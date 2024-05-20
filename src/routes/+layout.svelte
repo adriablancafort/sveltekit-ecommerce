@@ -1,6 +1,7 @@
 <script>
   import "../app.css";
   import Cart from "$lib/components/cart.svelte";
+  import Header from "$lib/components/header.svelte";
   import { onNavigate } from "$app/navigation";
 
   onNavigate((navigation) => {
@@ -19,6 +20,7 @@
   <div
     class="mx-auto max-w-[1400px] group-data-[state=open]:pr-52 duration-300 ease-in-out"
   >
+    <Header />
     <slot />
   </div>
   <Cart />
