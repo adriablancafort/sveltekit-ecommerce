@@ -1,5 +1,11 @@
-export async function load({ fetch, page }) {
-  const response = await fetch(`https://fakestoreapi.com/products?page=${page}`);
-  const products = await response.json();
-  return { products };
+import { loadProducts } from "$lib/store.js";
+
+let page1Loaded = false;
+
+export async function load({ fetch }) {
+  if (!page1Loaded) {
+    await loadProducts(fetch, 1);
+    page1Loaded = true;
+  }
+  return {};
 }

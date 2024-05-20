@@ -9,3 +9,15 @@ export function addToCart(product) {
         return [...items, product];
     });
 }
+
+// Products
+
+export const products = writable([]);
+
+export async function loadProducts(fetch, page) {
+  const response = await fetch(`https://fakestoreapi.com/products?page=${page}`);
+  const newProducts = await response.json();
+  products.update((products) => {
+    return [...products, ...newProducts];
+  });
+}
