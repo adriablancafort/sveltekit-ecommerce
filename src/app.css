@@ -9,13 +9,3 @@ a {
 img {
   -webkit-user-drag: none;
 }
-
-button {
-  color: white;
-  background-color: blue;
-  padding: 10px 20px;
-}
-
-.cart {
-  view-transition-name: cart;
-}

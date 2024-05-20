@@ -9,3 +9,9 @@
     <Item {product} />
   {/each}
 </div>
+
+<style>
+  .cart {
+    view-transition-name: cart;
+  }
+</style>

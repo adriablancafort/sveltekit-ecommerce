@@ -15,7 +15,7 @@
   <p>Price: {product.price}</p>
   <p>Category: {product.category}</p>
   <p>Rating: {product.rating.rate} ({product.rating.count} reviews)</p>
-  <button on:click={() => addToCart(product)}>Add to cart</button>
+  <button class="text-white bg-red-600 hover:bg-red-500 rounded text-lg px-4 py-1" on:click={() => addToCart(product)}>Add to cart</button>
 </div>
 
 <style>
