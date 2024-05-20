@@ -4,7 +4,7 @@ import { writable } from 'svelte/store';
 
 export const cart = writable([]);
 
-export function addToCart() {
+export function addToCart(product) {
     cart.update((items) => {
         return [...items, product];
     });
