@@ -36,9 +36,9 @@
   {#each $products as product, index (index)}
     <Card {product} />
   {/each}
-  <div bind:this={end}>
-    {#if loadCount >= loadLimit}
-      <button class="text-white bg-black hover:bg-gray-950 rounded text-lg px-4 py-1" on:click={resetLoad}>Load more</button>
-    {/if}
-  </div>
+</div>
+<div class="text-center" bind:this={end}>
+  {#if loadCount >= loadLimit}
+    <button class="text-white bg-black hover:bg-gray-950 rounded text-lg px-4" on:click={resetLoad}>Load more</button>
+  {/if}
 </div>
