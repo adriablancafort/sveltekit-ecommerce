@@ -3,13 +3,12 @@
   import { products, loadProducts } from '$lib/store.js';
   import Card from '$lib/components/card.svelte';
 
-  let page = 2;
+  let page = 1;
   let end;
 
   onMount(() => {
     const observer = new IntersectionObserver(([entry]) => {
       if (entry.isIntersecting) {
-        console.log(page);
         loadProducts(fetch, ++page);
       }
     });
