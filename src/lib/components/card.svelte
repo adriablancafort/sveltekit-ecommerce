@@ -11,7 +11,7 @@
       style:--image="image-{product.id}"
     />
   </a>
-  <h3 style:--title="title-{product.id}" class="text-2xl">{product.title}</h3>
+  <h3 class="text-2xl">{product.title}</h3>
   <p>Price: {product.price}</p>
   <p>Category: {product.category}</p>
   <p>Rating: {product.rating.rate} ({product.rating.count} reviews)</p>
@@ -21,9 +21,5 @@
 <style>
   img {
     view-transition-name: var(--image);
-  }
-
-  h3 {
-    view-transition-name: var(--title);
   }
 </style>
