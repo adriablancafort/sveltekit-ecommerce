@@ -16,10 +16,8 @@
   });
 </script>
 
-<main class="overflow-hidden group" data-state="open">
-  <div
-    class="mx-auto max-w-[1400px] group-data-[state=open]:pr-52 duration-300 ease-in-out"
-  >
+<main class="group" data-state="open">
+  <div class="mx-auto max-w-[1400px] group-data-[state=open]:pr-52 duration-300 ease-in-out">
     <Header />
     <slot />
   </div>
