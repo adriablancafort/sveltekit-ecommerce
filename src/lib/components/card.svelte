@@ -1,5 +1,5 @@
 <script>
-  import { addToCart } from "$lib/store.js";
+  import { addToCart } from '$lib/store.js';
   export let product;
 </script>
 
@@ -15,7 +15,7 @@
   <p>Price: {product.price}</p>
   <p>Category: {product.category}</p>
   <p>Rating: {product.rating.rate} ({product.rating.count} reviews)</p>
-  <button on:click={addToCart}>Add to cart</button>
+  <button on:click={() => addToCart(product)}>Add to cart</button>
 </div>
 
 <style>
