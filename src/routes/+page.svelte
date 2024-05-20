@@ -5,14 +5,22 @@
 
   let page = 1;
   let end;
+  let loadCount = 1;
+  const loadLimit = 4;
+
+  function resetLoad() {
+    loadProducts(fetch, ++page);
+    loadCount = 1;
+  }
 
   onMount(() => {
     const observer = new IntersectionObserver(([entry]) => {
-      if (entry.isIntersecting) {
+      if (entry.isIntersecting && loadCount < loadLimit) {
         loadProducts(fetch, ++page);
+        loadCount++;
       }
     }, {
-      rootMargin: '500px'
+      rootMargin: '800px'
     });
 
     observer.observe(end);
@@ -28,5 +36,9 @@
   {#each $products as product, index (index)}
     <Card {product} />
   {/each}
-  <div bind:this={end}></div>
+  <div bind:this={end}>´
+    {#if loadCount >= loadLimit}
+      <button on:click={resetLoad}>Load more</button>
+    {/if}
+  </div>
 </div>
