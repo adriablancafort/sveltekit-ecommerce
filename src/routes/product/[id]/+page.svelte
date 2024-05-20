@@ -1,10 +1,11 @@
 <script>
+  import { addToCart } from '$lib/store.js';
   export let data;
   const { product } = data;
 </script>
 
 <svelte:head>
-  <title>{product.title}</title>
+  <title>Asilor - {product.title}</title>
 </svelte:head>
 
 <div>
@@ -13,6 +14,7 @@
   <p>{product.description}</p>
   <p>Price: {product.price}</p>
   <p>Category: {product.category}</p>
+  <button on:click={() => addToCart(product)}>Add to cart</button>
 </div>
 
 <style>

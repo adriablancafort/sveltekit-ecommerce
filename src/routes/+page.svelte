@@ -33,7 +33,7 @@
 </script>
 
 <svelte:head>
-  <title>SvelteKit Ecommerce</title>
+  <title>Asilor</title>
 </svelte:head>
 
 <div class="grid grid-cols-5 gap-5 p-5">
