@@ -1,12 +1,6 @@
 <script>
-  import { cart } from "$lib/store.js";
+  import { addToCart } from "$lib/store.js";
   export let product;
-
-  function addToCart() {
-    cart.update((items) => {
-      return [...items, product];
-    });
-  }
 </script>
 
 <div class="border border-gray-300 rounded p-5 hover:scale-105 hover:shadow-xl">
