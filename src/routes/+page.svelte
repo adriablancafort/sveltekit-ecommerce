@@ -38,7 +38,7 @@
   {/each}
   <div bind:this={end}>
     {#if loadCount >= loadLimit}
-      <button class="text-white bg-red-600 hover:bg-red-500 rounded text-lg px-4 py-1" on:click={resetLoad}>Load more</button>
+      <button class="text-white bg-black hover:bg-gray-950 rounded text-lg px-4 py-1" on:click={resetLoad}>Load more</button>
     {/if}
   </div>
 </div>
