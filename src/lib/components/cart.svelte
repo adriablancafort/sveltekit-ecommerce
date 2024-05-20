@@ -1,5 +1,5 @@
 <script>
-  import Item from "./item.svelte";
+  import Item from '$lib/components/item.svelte';
   import { cart } from "$lib/store.js";
 </script>
 
