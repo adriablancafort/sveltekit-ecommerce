@@ -11,6 +11,8 @@
       if (entry.isIntersecting) {
         loadProducts(fetch, ++page);
       }
+    }, {
+      rootMargin: '500px'
     });
 
     observer.observe(end);
