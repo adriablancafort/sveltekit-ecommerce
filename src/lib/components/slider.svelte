@@ -2,9 +2,18 @@
     export let images;
 
     let activeImage = images[0];
-
+    
     const selectImage = (image) => {
         activeImage = image;
+    };
+    
+    let mouseX = 0;
+    let mouseY = 0;
+    
+    const zoomIn = (event) => {
+        const { left, top, width, height } = event.target.getBoundingClientRect();
+        mouseX = ((event.pageX - left) / width) * 100;
+        mouseY = ((event.pageY - top) / height) * 100;
     };
 </script>
 
@@ -22,11 +31,27 @@
         {/each}
     </div>
 
-    <img src={activeImage} alt="Title" class="rounded-lg" />
+    <div class="rounded-lg overflow-hidden">
+        <img 
+            src={activeImage} 
+            alt="Title" 
+            class="zoom-image"
+            on:mousemove={zoomIn} 
+            style="--mouse-x: {mouseX}%; --mouse-y: {mouseY}%;" 
+        />
+    </div>
 </div>
 
 <style>
-  img {
-    view-transition-name: var(--image);
-  }
+    img {
+        view-transition-name: var(--image);
+    }
+
+    .zoom-image {
+        transform-origin: var(--mouse-x) var(--mouse-y);
+    }
+
+    .zoom-image:hover {
+        transform: scale(2);
+    }
 </style>
