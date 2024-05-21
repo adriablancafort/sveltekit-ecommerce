@@ -26,7 +26,7 @@
     <ul class="absolute w-full bg-white z-10 rounded-b pt-1 -mt-1">
         {#each results as result (result.id)}
             <a href="/product/{result.id}">
-                <li class="border-t py-2">{result.title}</li>
+                <li class="border-t py-2 px-3">{result.title}</li>
             </a>
         {/each}
     </ul>
