@@ -3,16 +3,16 @@
     let results = [];
 
     const search = async () => {
-        const response = await fetch('https://fakestoreapi.com/products?limit=10');
-        const products = await response.json();
-        if (input !== '') {
-            results = products.filter(product => product.title.toLowerCase().includes(input.toLowerCase()));
-        } else {
+        const response = await fetch(`https://dummyjson.com/products/search?q=${input}`);
+        const data = await response.json();
+        if (input === '') {
             results = [];
+        } else {
+            results = data.products;
         }
     }
 
-    $: input, search();
+    $: search(), input;
 </script>
 
 <div class="w-full max-w-xs mx-auto bg-white rounded relative">
