@@ -1,11 +1,31 @@
 @import "tailwindcss";
 
-button,
-a {
-  -webkit-tap-highlight-color: transparent;
-  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
-}
-
 img {
   -webkit-user-drag: none;
+}
+
+html {
+  font-family: Inter;
+}
+
+h1, h2 {
+  font-family: Asilor;
+}
+
+@font-face {
+  font-family: "Asilor";
+  font-weight: 400;
+  src: url("/Asilor-400.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "Inter";
+  font-weight: 400;
+  src: url("/Inter-400.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "Inter";
+  font-weight: 600;
+  src: url("/Inter-600.woff2") format("woff2");
 }
