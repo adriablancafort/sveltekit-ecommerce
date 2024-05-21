@@ -3,14 +3,14 @@
   import { products, loadProducts } from '$lib/store.js';
   import Card from '$lib/components/card.svelte';
 
-  let page = 1;
+  let page = 0;
   let end;
   let loadCount = 1;
   const loadLimit = 4;
 
   function resetLoad() {
     loadProducts(fetch, ++page);
-    loadCount = 1;
+    loadCount = 0;
   }
 
   onMount(() => {
