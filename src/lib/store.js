@@ -15,8 +15,9 @@ export function addToCart(product) {
 export const products = writable([]);
 
 export async function loadProducts(fetch, page) {
-  const response = await fetch(`https://fakestoreapi.com/products?page=${page}`);
-  const newProducts = await response.json();
+  const response = await fetch(`https://dummyjson.com/products?limit=10&skip=${page*10}`);
+  const data = await response.json();
+  const newProducts = data.products;
   products.update((products) => {
     return [...products, ...newProducts];
   });
